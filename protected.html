@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Page</title>
+</head>
+<body>
+    <h1>Welcome to the Protected Page</h1>
+    <button onclick="logout()">Logout</button>
+
+    <script>
+        
+        if (sessionStorage.getItem("isAuthenticated") !== "true") {
+            alert("You must be logged in to access this page.");
+            window.location.href = "index.html";
+        }
+
+        
+        function logout() {
+            sessionStorage.clear();
+            alert("Logged out successfully.");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

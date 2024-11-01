@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcrypt.js/2.4.3/bcrypt.min.js"></script> 
+</head>
+<body>
+    <div class="form-container">
+        <h2 id="formTitle">Register</h2>
+        <form id="authForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" style="display: none;">
+            <button type="button" onclick="handleFormSubmit()">Submit</button>
+            <p id="toggleLink" onclick="toggleForm()">Already have an account? Log in here</p>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
